@@ -2,6 +2,7 @@ package TA5;
 
 public class CircularlySortedArray {
     // Function to find the total number of times the array is rotated
+    // O(log(n))
     public static int findRotationCount(int[] nums) {
         // search space is nums[left…right]
         int left = 0;
@@ -50,7 +51,7 @@ public class CircularlySortedArray {
     }
 
     public static void main(String[] args) {
-        int[] nums = {8, 9, 10, 1, 2, 3, 4, 5, 6, 7};
+        int[] nums = {8, 9, 10, 11, 1, 2, 3, 4, 5, 6, 7};
 
         System.out.println("Array is rotated " + findRotationCount(nums) + " times");
     }
