@@ -1,5 +1,6 @@
 package TA5;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class BinarySearch {
@@ -27,6 +28,7 @@ public class BinarySearch {
         Scanner scanner = new Scanner(System.in);
         int target = scanner.nextInt();
         int[] arr = {1, 2, 65, 34, 84, 345, 2, 97, 43, 3, 76, 9};
+        Arrays.sort(arr);
         System.out.println(binarySearch(arr, target));
     }
 }

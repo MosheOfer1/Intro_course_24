@@ -14,6 +14,7 @@ public class SelectionSort {
         for (int i = 0; i < arr.length; i++) {
             minIndex = findMinIndex(arr, i);
             swap(arr, i, minIndex);
+            System.out.println(Arrays.toString(arr));
         }
     }
 
@@ -27,7 +28,7 @@ public class SelectionSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = {1, 3, 2, 76, 23, 98, 100, 0, 22};
+        int[] arr = {9, 8, 7, 6, 5};
         selectionSort(arr);
         System.out.println(Arrays.toString(arr));
     }
