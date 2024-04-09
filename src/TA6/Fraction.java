@@ -18,11 +18,13 @@ public class Fraction {
     public Fraction(int nominator, int denominator) {
         this._nominator = nominator;
         this._denominator = denominator;
+        simplify();
     }
 
     public Fraction(Fraction other) {
         this._nominator = other._nominator;
         this._denominator = other._denominator;
+        simplify();
     }
 
     public Fraction plus(Fraction other) {
@@ -31,6 +33,15 @@ public class Fraction {
                 (this._denominator * other._nominator);
         this._denominator = this._denominator * other._denominator;
         return this;
+    }
+    private void simplify(){
+        int g = gcd(this._nominator, this._denominator);
+        this._nominator /= g;
+        this._denominator /= g;
+    }
+    private int gcd(int a, int b){
+        if (b == 0) return a;
+        return gcd(b, a % b);
     }
 
     @Override
